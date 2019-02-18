@@ -13,6 +13,15 @@
 		EB492A472180F627000BD803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB492A462180F627000BD803 /* Assets.xcassets */; };
 		EB492A4A2180F627000BD803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB492A482180F627000BD803 /* LaunchScreen.storyboard */; };
 		EB492A552180F627000BD803 /* CoordinatorPatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A542180F627000BD803 /* CoordinatorPatternTests.swift */; };
+		EB492A612180F64C000BD803 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A602180F64C000BD803 /* Coordinator.swift */; };
+		EB492A632180F65B000BD803 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A622180F65B000BD803 /* Presentable.swift */; };
+		EB492A652180F668000BD803 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A642180F668000BD803 /* Router.swift */; };
+		EB492A672180F675000BD803 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A662180F675000BD803 /* Presenter.swift */; };
+		EB492A6A2181099B000BD803 /* ExampleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A692181099B000BD803 /* ExampleCoordinator.swift */; };
+		EB492A6E21810AA1000BD803 /* ExamplePresentableFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A6D21810AA1000BD803 /* ExamplePresentableFactory.swift */; };
+		EB492A7021810B1B000BD803 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A6F21810B1B000BD803 /* ExampleViewController.swift */; };
+		EB492A7221810BAD000BD803 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A7121810BAD000BD803 /* ExampleView.swift */; };
+		EB492A7521810C86000BD803 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB492A7421810C86000BD803 /* Instantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		EB492A502180F627000BD803 /* CoordinatorPatternTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorPatternTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB492A542180F627000BD803 /* CoordinatorPatternTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPatternTests.swift; sourceTree = "<group>"; };
 		EB492A562180F627000BD803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB492A602180F64C000BD803 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		EB492A622180F65B000BD803 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		EB492A642180F668000BD803 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EB492A662180F675000BD803 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		EB492A692181099B000BD803 /* ExampleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCoordinator.swift; sourceTree = "<group>"; };
+		EB492A6D21810AA1000BD803 /* ExamplePresentableFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresentableFactory.swift; sourceTree = "<group>"; };
+		EB492A6F21810B1B000BD803 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		EB492A7121810BAD000BD803 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
+		EB492A7421810C86000BD803 /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,9 @@
 		EB492A3E2180F626000BD803 /* CoordinatorPattern */ = {
 			isa = PBXGroup;
 			children = (
+				EB492A7321810C6A000BD803 /* Instantiable */,
+				EB492A6821810978000BD803 /* Implementation */,
+				EB492A5F2180F62F000BD803 /* Coordinator */,
 				EB492A3F2180F626000BD803 /* AppDelegate.swift */,
 				EB492A412180F626000BD803 /* ViewController.swift */,
 				EB492A432180F626000BD803 /* Main.storyboard */,
@@ -94,6 +115,36 @@
 				EB492A562180F627000BD803 /* Info.plist */,
 			);
 			path = CoordinatorPatternTests;
+			sourceTree = "<group>";
+		};
+		EB492A5F2180F62F000BD803 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EB492A602180F64C000BD803 /* Coordinator.swift */,
+				EB492A622180F65B000BD803 /* Presentable.swift */,
+				EB492A642180F668000BD803 /* Router.swift */,
+				EB492A662180F675000BD803 /* Presenter.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EB492A6821810978000BD803 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EB492A692181099B000BD803 /* ExampleCoordinator.swift */,
+				EB492A6D21810AA1000BD803 /* ExamplePresentableFactory.swift */,
+				EB492A6F21810B1B000BD803 /* ExampleViewController.swift */,
+				EB492A7121810BAD000BD803 /* ExampleView.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		EB492A7321810C6A000BD803 /* Instantiable */ = {
+			isa = PBXGroup;
+			children = (
+				EB492A7421810C86000BD803 /* Instantiable.swift */,
+			);
+			path = Instantiable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +248,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB492A672180F675000BD803 /* Presenter.swift in Sources */,
 				EB492A422180F626000BD803 /* ViewController.swift in Sources */,
+				EB492A632180F65B000BD803 /* Presentable.swift in Sources */,
+				EB492A6A2181099B000BD803 /* ExampleCoordinator.swift in Sources */,
+				EB492A6E21810AA1000BD803 /* ExamplePresentableFactory.swift in Sources */,
+				EB492A652180F668000BD803 /* Router.swift in Sources */,
 				EB492A402180F626000BD803 /* AppDelegate.swift in Sources */,
+				EB492A612180F64C000BD803 /* Coordinator.swift in Sources */,
+				EB492A7021810B1B000BD803 /* ExampleViewController.swift in Sources */,
+				EB492A7521810C86000BD803 /* Instantiable.swift in Sources */,
+				EB492A7221810BAD000BD803 /* ExampleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
