@@ -9,17 +9,13 @@
 import Foundation
 
 protocol ExampleCoordinator: Coordinator {
-    var didTapButton: (() -> Void)? { get set }
     func showSomething()
 }
 
 class ExampleCoordinatorImplementation: ExampleCoordinator {
-    var didTapButton: (() -> Void)?
 
     private let router: Router
     private let presentableFactory: ExamplePresentableFactory
-
-    var examplePresentable: ExamplePresentable?
 
     init(router: Router, presentableFactory: ExamplePresentableFactory) {
         self.router = router
@@ -27,11 +23,7 @@ class ExampleCoordinatorImplementation: ExampleCoordinator {
     }
 
     func start() {
-        guard let presentable = presentableFactory.makeExamplePresentable() else { return }
+        let presentable = presentableFactory.makeExamplePresentable()
         router.present(presentable, animated: true, completion: nil)
-    }
-
-    func showSomething() {
-        //
     }
 }
