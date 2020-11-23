@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ExampleCoordinator: Coordinator {
-    func showSomething()
+    var didFinish: (() -> Void)?
 }
 
 class ExampleCoordinatorImplementation: ExampleCoordinator {
