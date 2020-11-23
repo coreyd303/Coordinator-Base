@@ -22,6 +22,4 @@ extension UIViewController: Presenter {
     func dismissPresentable(animated: Bool, completion: (() -> Void)?) {
         dismiss(animated: animated, completion: completion)
     }
-
-
 }
