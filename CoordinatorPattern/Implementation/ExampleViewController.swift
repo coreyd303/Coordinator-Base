@@ -12,8 +12,7 @@ import UIKit
 protocol ExamplePresentable: Presentable {
     var didTap: (() -> Void)? { get set }
 
-    func start()
-    func stop()
+    func somethingPublic()
 }
 
 class ExampleViewController: UIViewController, ExamplePresentable {
@@ -22,15 +21,9 @@ class ExampleViewController: UIViewController, ExamplePresentable {
         return view as? ExampleView
     }
 
-    func start() {
-        // actions at intialization, for example primaryView.startAction()
+    func somethingPublic() {
+        // do something awesome
     }
-
-    func stop() {
-        // actions at deinitialization, for example primaryView.stopAction()
-    }
-
-
 }
 
 extension ExampleViewController: Instantiable {
@@ -40,5 +33,26 @@ extension ExampleViewController: Instantiable {
     }
     static func storyboardSpecifications() -> StoryboardSpecifications {
         return(Storyboard.Name, Storyboard.Identifier)
+    }
+}
+
+
+
+protocol ExampleInteractor: class {
+    var someDataObject: Any? { get }
+    
+    func sendNotification()
+}
+
+class ExampleInteractorImplementation: ExampleInteractor {
+    
+    private(set) var someDataObject: Any?
+
+    func updateObject(newData: String) {
+        someDataObject.property = newData
+    }
+    
+    func sendNotification() {
+        // shout it out yo!
     }
 }
